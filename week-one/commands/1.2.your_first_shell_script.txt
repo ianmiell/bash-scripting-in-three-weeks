@@ -1,0 +1,11 @@
+pwd
+mkdir bashin3weeks
+ls
+cd bashin3weeks
+cat > first_script.sh <<EOF
+#!/bin/bash
+echo Hello world
+EOF
+cat first_script.sh
+./first_script.sh
+chmod +x first_script.sh

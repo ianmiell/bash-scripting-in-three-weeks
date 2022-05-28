@@ -1,0 +1,37 @@
+git clone https://github.com/kubernetes/kubernetes
+cd kubernetes
+du .                     # disk taken up by each file, in 512-byte blocks
+du -s .                  # disk taken up by all files (summary)
+du -hs .                 # disk taken up by all files in human-readable form
+grep network *
+grep -r network *
+grep -r network * | less
+grep -r network * | wc             # lines, words, characters
+grep -r network * | wc -l
+grep -ri Network * | wc -l
+grep -riw Network * | wc -l
+grep -vrwi Network * | less
+grep -nrwi Network | less
+grep -rwi Network | tr 'n' 'p' | less
+grep -rwi Network | tr 'nN' 'pP' | less
+grep -rwi Network | tr -d '\n \t' | less
+grep -rwi Network | sed 's/Network/FOO/' | less
+grep -rwi Network | sed 's/[Nn]etwork/FOO/' | less
+grep -rwi Network | sed 's/[Nn]etwork/FOO/g' | less
+grep -rwi Network | sort | less
+grep -hrwi Network | sort | less
+wc -l README.md
+wc -w README.md
+wc -c README.md
+grep -rw 'Network' * | wc -l
+grep -rw 'Network' * | wc -c
+grep -rw 'Network' * | wc -w
+grep -rwi 'Network' * | wc -l
+grep -rwi 'Network' * | wc -c
+grep -rwi 'Network' * | wc -w
+head README.md
+tail README.md
+tail -20 README.md
+tail -f README.md
+# another window
+echo HELLO >> README.md

@@ -1,0 +1,5 @@
+ls *
+echo 'Some text' > afile
+grep '.*' afile
+grep .* afile
+grep * afile

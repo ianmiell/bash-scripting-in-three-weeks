@@ -1,0 +1,58 @@
+cd
+pwd
+cd /tmp
+cd -
+mkdir icl-core
+cd icl-core
+cd -
+cd -
+mkdir path/to/a/new/folder
+mkdir -p path/to/a/new/folder
+cd path
+touch afile
+touch .adotfile
+ls
+ls -l
+ls -a
+ls -lrt
+ls -lrta
+ls -R
+ls -lR
+rm afile
+ls
+rm to
+rmdir to
+rmdir to/a/new/folder
+ls -lR
+rm -r to/a
+ls -lR
+cat > afile << EOF
+some text in a file
+some more text
+EOF
+cat afile
+tac afile
+cp afile afile.copied
+cat afile
+cat afile.copied
+echo some text
+echo -n no newline; echo -n no newline
+echo -n no newline && echo -n no newline
+less /usr/share/doc/bash/copyright
+man ls
+man man
+man 1 intro
+man 2 intro [etc]
+man
+man -K browser
+sudo ls
+mkdir tmp
+cd tmp
+touch afile
+ls afile
+ls -l afile
+chmod -r afile    # no-one can read
+chmod +r afile    # everyone can read
+chmod o-r afile   # user and group can read
+chmod g+r afile   # group can read
+info chmod
