@@ -1,0 +1,15 @@
+PART I
+======
+
+Write a script called `name.sh` that outputs your name to the terminal.
+
+The file should be executable.
+
+PART II
+=======
+Write a script called `name2.sh` that:
+
+- creates a folder called `name`
+- creates an executable script called `name.sh` in the folder `name` that outputs your name to the terminal
+- runs the `name/name.sh` script
+- returns to the original folder, and deletes the `name` folder and all its contents

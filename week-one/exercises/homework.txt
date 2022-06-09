@@ -1,0 +1,35 @@
+PART I
+======
+
+- Create a folder called `myfolder`
+- Adds several files called file1, file2, file3 etc to it
+- Add several subfolders to it that also has files in it
+- Add a random number of lines to each file
+
+Write an executable script called `task1.sh` that
+
+- lists all the files under the folder `myfolder`
+
+The output should look like this:
+
+```
+file1 is in the folder /root/task1
+file2 is in the folder /root/task1/subfolder1
+[...]
+```
+
+PART II
+=======
+
+Write a script called `file_reporter.sh` that
+
+- lists all the files under `myfolder`, and
+- the number of lines in each file
+
+The output should look like this:
+
+```
+file1 is in the folder /root, and has 2 lines
+file2 is in the folder /root, and has 3 lines
+[...]
+```
