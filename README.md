@@ -20,26 +20,30 @@ Each week is a folder in this repo, and each week contains the commands that are
 
 [Shellcheck](http://www.shellcheck.net)
 
+[Explain A Shell Command To You](https://www.explainshell.com/)
+
 [Regular expression exercises](https://regexone.com)
 
 [Bash playground in the browser](https://katacoda.com/courses/centos/playground)
 
 [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 
-[A Getting Things Done Tool in Bash](git@github.com:ianmiell/get-things-done)
+[A Getting Things Done Tool In Bash](git@github.com:ianmiell/get-things-done)
 
 [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
 
 [Bash Wiki](http://wiki.bash-hackers.org)
 
-[Discussion of Traps](https://news.ycombinator.com/item?id=16141838)
+[Discussion Of Traps](https://news.ycombinator.com/item?id=16141838)
 
-[Discussion on Improving at Bash (1)](https://news.ycombinator.com/item?id=14634964)
+[Discussion On Improving At Bash (1)](https://news.ycombinator.com/item?id=14634964)
 
-[Discussion on Improving at Bash (2)](https://news.ycombinator.com/item?id=12485650)
+[Discussion On Improving At Bash (2)](https://news.ycombinator.com/item?id=12485650)
 
-[Discussion on Mastering Bash](https://news.ycombinator.com/item?id=13400350)
+[Discussion On Mastering Bash](https://news.ycombinator.com/item?id=13400350)
 
-[Discussion of Bash Pitfalls](https://news.ycombinator.com/item?id=10068567)
+[Discussion Of Bash Pitfalls](https://news.ycombinator.com/item?id=10068567)
 
 [Bash Redirections Cheat Sheet](http://www.catonmat.net/download/bash-redirections-cheat-sheet.pdf)
+
+[Bash Source Code](https://git.savannah.gnu.org/git/bash.git)
