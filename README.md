@@ -4,15 +4,15 @@
 
 An three week O'Reilly course to take you from beginner to advanced in bash scripting, and prepare you for a career writing shell scripts.
 
-## What You Need
+## What You Need
 
 You will need a terminal to run on, or can use [katacoda](https://katacoda.com/courses/centos/playground)
 
-## Structure
+## Structure
 
 Each week is a folder in this repo, and each week contains the commands that are planned to be run (the course itself may deviate from this) in the `commands` folder, and exercises in the `exercises` folder.
 
-## Useful Links
+## Useful Links
 
 [Bash Man Page](https://man7.org/linux/man-pages)
 
