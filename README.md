@@ -10,7 +10,37 @@ You will need a terminal to run on, or can use [katacoda](https://katacoda.com/c
 
 ## Structure
 
-Each week is a folder in this repo, and each week contains the commands that are planned to be run (the course itself may deviate from this) in the `commands` folder, and exercises in the `exercises` folder.
+Each week is a folder in this repo, and each week contains the commands that are planned to be run (the course itself may deviate from this) in the `commands` folder.
+
+## Exercises
+
+### Week One
+
+[Write Simple Bash Scripts That Output Text](https://learning.oreilly.com/scenarios/-/9781098138431/)
+
+[Bash Loops and Arguments](https://learning.oreilly.com/scenarios/-/9781098138448/)
+
+[Bash Tests](https://learning.oreilly.com/scenarios/-/9781098138523/)
+
+[Create a File-Reporting Application](https://learning.oreilly.com/scenarios/-/9781098138530/)
+
+### Week Two
+
+[Write Simple Bash Scripts That Redirect Standard Output and Standard Error](https://learning.oreilly.com/scenarios/-/9781098138547/)
+
+[Bash Subshell](https://learning.oreilly.com/scenarios/-/9781098138554/)
+
+[Bash Here-Docs](https://learning.oreilly.com/scenarios/-/9781098138561/)
+
+[Bash Globs and Redirection](https://learning.oreilly.com/scenarios/-/9781098138578/)
+
+### Week Three
+
+[Bash Debugging](https://learning.oreilly.com/scenarios/-/9781098138585/)
+
+[Waiting for Tasks to Complete](https://learning.oreilly.com/scenarios/-/9781098138592/)
+
+[Trapping Signals in Shell Scripts](https://learning.oreilly.com/scenarios/-/9781098138721/)
 
 ## Useful Links
 

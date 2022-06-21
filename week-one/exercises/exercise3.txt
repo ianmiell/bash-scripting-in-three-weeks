@@ -1,3 +1,0 @@
-Write a script called `nfiles.sh` that creates n files in a shell script, but always terminates after it creates the 50th file.
-
-The files should be called 1.txt, 2.txt ... n.txt.
