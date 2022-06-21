@@ -1,0 +1,38 @@
+cd
+find ~/git -name kubernetes                               # find files with the name 'kubernetes' in the folder 'git'
+find ~/git -name kubernetes -type f                       # find files with the name 'kubernetes' in the folder 'git' that are of type 'file'
+find ~/git -name kubernetes -type d                       # find files with the name 'kubernetes' in the folder 'git' that are of type 'directory'
+man find                                                  # look for info on types and flags
+find ~/git -name '*.go' -type f -exec grep network {} \;  # look for Go files and search them for the work network
+touch someuniquefile                              # create a file that does not exist
+locate someuniquefile                             # not there
+sudo updatedb                                     # update the database
+locate someuniquefile                             # file is in the database now
+touch afile                                       # create a file
+cp afile copyofafile                              # simple copying of a file
+rm afile copyofafile                              # remove files
+cd ~/git
+cd
+mkdir icl-file
+cd icl-file
+touch afile
+cp afile afile.copied
+diff afile afile.copied                           # no difference
+cat >> afile.copied << EOF
+a line added
+EOF
+diff afile afile.copied                           # diff shows line added
+cat >> afile << EOF
+another line added
+EOF
+diff afile afile.copied                           # diff shows two different lines
+cd
+cd git
+diff kubernetes kubernetes-bak                    # just looks at contents of the folders
+diff -r kubernetes kubernetes-bak                 # recurses down, looking for differences in files
+touch kubernetes-bak/somefile                     # add a file to kubernetes-bak
+diff -r kubernetes kubernetes-bak                 # file mentioned in diff
+cat > kubernetes/somefile << EOF
+asdasfasf
+EOF
+diff -r kubernetes kubernetes-bak                 # file diffed

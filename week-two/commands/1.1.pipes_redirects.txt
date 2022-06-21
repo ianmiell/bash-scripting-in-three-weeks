@@ -1,0 +1,14 @@
+mkdir itb_pipes_redirects
+cd itb_pipes_redirects
+echo "contents of file" > sometext
+cat sometext
+cat sometext | grep -c file
+cat doesnotexist
+cat doesnotexist | grep -c file
+cat doesnotexist | grep -c file
+cat doesnotexist                      # standard error (2) and standard output (1) goes to terminal
+cat doesnotexist > nothing            # standard output (1) goes to 'nothing'
+cat doesnotexist 2> someerrortext     # standard output (2) goes to 'someerrortext'
+cat someerrortext                     # error in here
+echo sometext > afile
+echo sometext 1> afile

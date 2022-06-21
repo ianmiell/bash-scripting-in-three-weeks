@@ -1,0 +1,33 @@
+mkdir itb_glob
+cd itb_glob
+touch file1 file2 file3
+ls
+ls *
+echo *
+echo ls *
+echo ls '*'
+echo '$HOME'
+ls "*"
+ls *1
+ls file[12]
+ls file[a-z]      # doesn't return anything
+ls fil[a-z][0-9]  # returns all files
+echo file?
+touch .adotfile
+mkdir .adotfolder
+touch .adotfolder/file1 .adotfolder/.adotfile
+ls
+ls *
+echo .*
+ls .*
+ls .adotfile .adotfolder . ..
+cd .
+echo text > afile
+cat afile
+grep text afile
+grep '*' afile                # no match
+grep '.*' afile               # matches
+echo '*' > afile
+cat afile
+grep '*' afile                # matches
+grep '.*' afile               # matches

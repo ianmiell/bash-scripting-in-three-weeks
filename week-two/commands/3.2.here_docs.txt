@@ -1,0 +1,18 @@
+mkdir -p bns_heredocs && cd bns_heredocs
+cat > afile.txt << END
+A file can contain
+       whatever you like
+END
+cat afile.txt
+cat > pidfile << END
+The parent pid is $PPID
+END
+cat > pidfile << 'END'
+The parent pid is $PPID
+END
+cat > script <<- 'END'
+	#!/bin/bash
+	echo $PPID
+	echo This is not the END
+END
+cat > herefile <<< "asd asd"
