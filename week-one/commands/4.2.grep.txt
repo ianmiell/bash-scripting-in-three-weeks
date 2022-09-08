@@ -5,21 +5,22 @@ du -s .                  # disk taken up by all files (summary)
 du -hs .                 # disk taken up by all files in human-readable form
 grep network *
 grep -r network *
-grep -r network * | less
-grep -r network * | wc             # lines, words, characters
-grep -r network * | wc -l
-grep -ri Network * | wc -l
-grep -riw Network * | wc -l
-grep -vrwi Network * | less
-grep -nrwi Network | less
-grep -rwi Network | tr 'n' 'p' | less
-grep -rwi Network | tr 'nN' 'pP' | less
-grep -rwi Network | tr -d '\n \t' | less
-grep -rwi Network | sed 's/Network/FOO/' | less
-grep -rwi Network | sed 's/[Nn]etwork/FOO/' | less
-grep -rwi Network | sed 's/[Nn]etwork/FOO/g' | less
-grep -rwi Network | sort | less
-grep -hrwi Network | sort | less
+grep -Ir network *
+grep -Ir network * | less
+grep -Ir network * | wc             # lines, words, characters
+grep -Ir network * | wc -l
+grep -Iri Network * | wc -l
+grep -Iriw Network * | wc -l
+grep -Ivrwi Network * | less
+grep -Inrwi Network | less
+grep -Irwi Network | tr 'n' 'p' | less
+grep -Irwi Network | tr 'nN' 'pP' | less
+grep -Irwi Network | tr -d '\n \t' | less
+grep -Irwi Network | sed 's/Network/FOO/' | less
+grep -Irwi Network | sed 's/[Nn]etwork/FOO/' | less
+grep -Irwi Network | sed 's/[Nn]etwork/FOO/g' | less
+grep -Irwi Network | sort | less
+grep -Ihrwi Network | sort | less
 wc -l README.md
 wc -w README.md
 wc -c README.md
