@@ -1,0 +1,59 @@
+mkdir xargs
+cd xargs
+touch 1.txt 2.txt 3.txt
+cat > 1.txt << EOF
+Some text for file 1
+EOF
+cat > 2.txt << EOF
+Some text for file 2
+EOF
+cat > 3.txt << EOF
+Some text for file 3
+EOF
+ls | xargs echo The filenames are:
+ls | xargs -n1 echo The filenames are:
+ls | xargs -n2 echo The filenames are:
+ls | xargs -n2 -p echo The filenames are:
+ls | xargs -IXXX echo The filenames XXX are in the middle of the output     # What if you don't want the filename at the end? Automatically one per line
+echo "     whitespace either side           "
+echo "     whitespace either side           " | xargs                       # also useful for getting rid of whitespace on lines
+time echo 1 1 1             # The time command
+time echo 1 1 1 | xargs -n1 sleep
+time echo 1 1 1 | xargs -P2 -n1 sleep
+time echo 1 1 1 | xargs -P3 -n1 sleep
+cat > data << EOF
+1) Alan Salary 10000
+2) James Expenses 90
+3) Billy Bonus 500
+4) Accounts Parking 200
+5) Accounts Fine 50
+EOF
+awk 'BEGIN{printf "ID Name Transaction Amount\n"} {print $1 $2 $3 $4}' data    # BEGIN section
+awk '{print $3}' data                                                          # Remove begin, Just print the 3rd item on each line
+awk '{print $2,$3,$4}' data                                                    # Just print the 2nd 3rd 4th item on each line
+awk '{++numlines} END {print "Number of lines is: ", numlines}' data           # use variables to track data
+awk '{s+=$4} END {print s}' data                                               # add a series of numbers
+cat > script.sh << 'EOFSCRIPT'
+#!/bin/bash
+cat > /root/pidscript.sh << 'END'
+echo "$PPID $BASHPID"
+END
+'EOFSCRIPT'
+chmod +x /root/pidscript.sh
+chmod +x /root/script.sh
+https://learning.oreilly.com/scenarios/bash-fundamentals-challenge/9781098138578/
+vi script.sh
+cat > script.sh << 'EOFSCRIPT'
+#!/bin/bash
+for f in $(find /root/files -type f | xargs -n1 basename | sort)
+do
+  cd /root
+  folder=$(find . -type f | grep -w "$f$" | xargs -n1 dirname)
+  cd $folder
+  ls a*b* | grep $f || continue
+  ls ??????? | grep $f || continue
+  bash ./$f >> /root/standard 2>>/root/error
+done
+EOFSCRIPT
+chmod +x /root/script.sh
+/root/script.sh

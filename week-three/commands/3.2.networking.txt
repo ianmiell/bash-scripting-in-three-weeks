@@ -1,0 +1,23 @@
+wget https://bbc.co.uk/news
+less news  # q to quit
+curl https://bbc.co.uk/news
+curl -v https://bbc.co.uk/news
+curl -L https://bbc.co.uk/news
+wget -e robots=off --mirror -k -np http://learnlispthehardway.org/book
+nc -l 1234
+nc 1234
+ping bbc.co.uk
+ping -c1 bbc.co.uk
+ping -c1 nowhere
+ip addr
+ip -o addr
+ip -o addr | grep -v veth
+ip route
+ip neigh
+dig bbc.co.uk                                 # Basic output. Note the SERVER line
+dig +trace bbc.co.uk                          # Trace how the info was got
+dig @8.8.8.8 bbc.co.uk                        # Use google's DNS server
+dig bbc.co.uk NS                              # Who is the nameserver for this address?
+dig +short bbc.co.uk                          # Just the IP - get used to this!
+dig +short +identify bbc.co.uk                # Just the IP, and tell me who told me
+nmap bbc.co.uk                                # tells you which standards ports are open on a host

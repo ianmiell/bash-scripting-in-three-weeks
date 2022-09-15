@@ -1,0 +1,47 @@
+man signal    # q to quit
+sleep 999 # NOW HIT CTRL, HOLD IT DOWN AND THEN HIT C (CTRL-c)
+echo $?
+man signal    # q to quit
+sleep 999 # NOW HIT CTRL, HOLD IT DOWN AND THEN HIT Z (CTRL-z)
+echo $?
+jobs
+kill %1
+sleep 999 &
+KILLPID=$!
+echo ${KILLPID}
+kill -15 ${KILLPID}
+echo $?
+:
+: you can type anything here
+echo $?
+cd /tmp && : now in tmp folder && cd - && : now back in previous folder
+while :; do sleep 5; done
+mkdir -p bns_traps && cd bns_traps
+cat > trap_exit.sh << END
+  #!/bin/bash
+  trap "echo trapped" INT
+  while :; do sleep 5; done
+END
+chmod +x trap_exit.sh
+./trap_exit.sh # NOW HIT CTRL-c
+kill %1 # HIT CTRL-z
+cat > trap_exit.sh << 'EOF'
+#!/bin/bash
+trap "echo trapped" EXIT
+sleep 999 &
+wait
+EOF
+./trap_exit.sh &
+TRAP_EXIT_PID=$!
+kill -15 ${TRAP_EXIT_PID}
+ps -ef | grep sleep
+./trap_exit.sh &
+TRAP_EXIT_PID=$!
+kill -9 ${TRAP_EXIT_PID}
+sleep 120 &
+sleep 121 &
+jobs
+fg
+sleep 121
+bg
+kill %1

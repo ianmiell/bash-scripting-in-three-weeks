@@ -1,0 +1,38 @@
+ps                                                             # show processes running in your shell session
+ps -e                                                          # show all processes running on your machine
+ps -A                                                          # same as -e
+ps -ef                                                         # show fuller details for these processes
+sleep 192837 &                                                 # run a process in the background
+ps -ef | grep sleep | grep 192837                              # get the pid
+kill [PROCESS ID]                                              # try and politely terminate the process
+sleep 192837 &                                                 # run same process in the background again
+ps -ef | grep sleep | grep 192837                              # get the pid
+kill -9 [PROCESS ID]                                           # try to force termination of the process, not the different description
+top                                                            # top command; q to quit
+top -n 1                                                       # top with only one iteration
+top -b -n 1                                                    # top with only one iteration in 'batch' mode
+watch -d top -b -n 1                                           # watch for changes running top
+systemctl                                                      # items running on your system under systemd control
+systemctl status                                               # status of above items
+systemctl status postgresql                                    # look at status of specific service
+journalctl -u postgresql                                       # try looking at it as a 'normal' user
+sudo journalctl -u posgresql                                   # if that doesn't work, try as root
+/etc/systemd/system
+/etc/systemd/system/[target name].target.wants                 # contains services that are part of the target name
+lsof                                                           # a lot of output...
+man lsof                                                       # look at type of file, q to quit
+lsof -c ls                                                     # show files open associated with a command
+lsof -i :80                                                   # show files open and associated with a port
+lsof -p 1                                                      # show files associated with the 'root' or 'init' process
+strace ls                                                      # show system calls for ls command
+strace -e read ls                                              # show all calls to read system call for ls
+strace -e read -s 1024 ls                                      # show all calls to read system call and show 1024 characters of data
+strace -e read -s 1024 -o out ls                               # as above, but write output to a file
+strace -e read,write -s 1000 curl bbc.co.uk                    # show all read and write system calls to a curl of bbc
+strace -t -e read,write -s 1000 curl bbc.co.uk                 # as above with time flag
+strace -tt -e read,write -s 1000 curl bbc.co.uk                # as above with a further time flag
+strace -ttt -e read,write -s 1000 curl bbc.co.uk               # as above with another time flag
+strace -c ls                                                   # summarise system calls
+strace -o nofollow curl bbc.co.uk                              # capture curl to a file
+strace -f -o follow curl bbc.co.uk                             # as above, but follow child processes
+sdiff follow nofollow                                          # side by side diff

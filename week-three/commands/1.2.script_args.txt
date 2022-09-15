@@ -1,0 +1,21 @@
+a=1
+case "$a" in
+1) echo 'a is 1'; echo 'ok';;
+2) echo 'a is 2'; echo 'ok';;
+*) echo 'a is unmatched'; echo 'failure';;
+esac
+#!/bin/bash
+while getopts "ab:c" opt
+do
+    case "$opt" in
+    a) echo '-a invoked';;
+    b) echo "-b invoked with argument: ${OPTARG}";;
+    c) echo '-c invoked';;
+    esac
+done
+chmod +x case.sh
+./case.sh -a
+./case.sh -b
+./case.sh -b "an argument"
+./case.sh -a -b -c
+./case.sh

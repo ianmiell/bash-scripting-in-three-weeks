@@ -1,0 +1,17 @@
+unset DOESNOTEXIST
+echo $DOESNOTEXIST
+[ -z "$DOESNOTEXIST" ]
+echo $?
+[ -z ]
+echo $?
+[[ 10 < 2 ]]
+echo $?
+[[ '10' < '2' ]]
+echo $?
+[ 10 -lt 2 ]
+echo $?
+[[ 1 -lt 2 ]]
+echo $?
+[[ '10' -gt '2' ]]
+echo $?
+declare -i

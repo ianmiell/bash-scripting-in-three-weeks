@@ -1,0 +1,29 @@
+date
+sleep 30 &
+sleep 31 &
+pwd
+pwd
+[1]+  Done                    sleep 30
+sleep 5 &
+wait
+sleep 10 &
+sleep 11 &
+wait
+sleep 15 &
+sleep 16 && willfail &
+wait
+echo $?
+sleep 5 && willfail &
+wait
+echo $?
+sleep 5 && willfail &
+wait -n
+sleep 15 &
+sleep 16 && willfail &
+wait -n
+sleep 999 &
+leep 998 &
+jobs
+kill %2
+jobs
+kill %1

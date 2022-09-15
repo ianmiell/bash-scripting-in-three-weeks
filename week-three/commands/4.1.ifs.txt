@@ -1,0 +1,30 @@
+mkdir bns_ifs && cd bns_ifs
+echo file1 created > "Spaces in filename1.txt"
+cat "Spaces in filename1.txt"
+echo file2 created > "Spaces in filename2.txt"
+cat "Spaces in filename2.txt"
+or f in $(ls)
+do
+  ls $f
+done
+for f in 1 2 3 4
+do
+  echo $f
+done
+for f in $(echo 1 2 3 4)
+do
+  echo $f
+done
+echo $IFS
+set | grep IFS
+man ascii    # q to quit
+echo $'a\x0bb\x0bc'
+IFS=$'\t\n'
+for f in $(ls)
+do
+  ls $f
+done
+find . -type f -print0
+find . -type f -print0 | wc -c
+find . -type f -print0 | xargs grep -n1 file
+find . -type f -print0 | xargs -0 grep file
