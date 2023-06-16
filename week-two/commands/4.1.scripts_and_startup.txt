@@ -16,6 +16,10 @@ simple_script    # might fail, depending on your PATH variable
 echo $PATH
 PATH=${PATH}:.
 simple_script
+echo $0
+cat /etc/shells
+cat /etc/passwd
+chpass
 MYVAR=Hello
 echo 'echo $MYVAR' > simple_echo
 chmod +x simple_echo
