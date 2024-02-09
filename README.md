@@ -6,7 +6,7 @@ An three week O'Reilly course to take you from beginner to advanced in bash scri
 
 ## What You Need
 
-You will need a terminal to run on, or can use [katacoda](https://katacoda.com/courses/centos/playground)
+You will need a terminal to run on, or can use O'Reilly scenarios, eg: https://learning.oreilly.com/scenarios/bash-fundamentals-challenge/9781098138431/
 
 ## Structure
 
